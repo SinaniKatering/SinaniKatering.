@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restorant Sinani – Katering & Evente</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #faf7f2;
+    --dark: #1a1510;
+    --dark2: #2d2418;
+    --text: #3a3020;
+    --text-light: #6b5e45;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 60px; background: rgba(26, 21, 16, 0.95);
+    border-bottom: 1px solid var(--gold);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 600; color: var(--gold);
+    letter-spacing: 2px; text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 30px; list-style: none; }
+  .nav-links a {
+    color: var(--white); text-decoration: none;
+    font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    height: 80vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('IMG-20260424-WA0012.jpg') no-repeat center center/cover;
+    display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white);
+  }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 4rem; margin-bottom: 10px; }
+  .hero p { font-size: 1.2rem; max-width: 700px; margin-bottom: 30px; }
+
+  /* SECTION GENERAL */
+  section { padding: 80px 10%; }
+  .section-title { text-align: center; margin-bottom: 50px; }
+  .section-title h2 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--dark); }
+  .line { width: 60px; height: 3px; background: var(--gold); margin: 15px auto; }
+
+  /* ABOUT SECTION */
+  .about-content { max-width: 900px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; text-align: center; }
+  
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+  .card { background: white; padding: 30px; border: 1px solid #eee; text-align: left; }
+  .card h3 { color: var(--gold); margin-bottom: 15px; }
+  .card ul { list-style: none; }
+  .card ul li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+  .card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: bold; }
+
+  /* GALLERY */
+  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; }
+  .gallery-item { height: 250px; overflow: hidden; cursor: pointer; border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+  .gallery-item:hover img { transform: scale(1.1); }
+
+  /* CONTACT */
+  .contact-box { background: var(--dark); color: white; padding: 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+  .contact-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; }
+  .phone-link { color: var(--gold-light); font-size: 1.5rem; text-decoration: none; font-weight: bold; }
+
+  input, select, textarea { width: 100%; padding: 12px; margin-bottom: 12px; border: none; outline: none; font-family: inherit; }
+  .btn-wa { background: var(--gold); border: none; padding: 15px 20px; cursor: pointer; font-weight: bold; width: 100%; text-transform: uppercase; color: var(--dark); transition: 0.3s; }
+  .btn-wa:hover { background: var(--gold-light); }
+
+  footer { background: #111; color: #777; text-align: center; padding: 30px; font-size: 0.9rem; }
+
+  @media (max-width: 768px) {
+    .grid-3, .contact-box { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.5rem; }
+    nav { padding: 20px; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">RESTORANT <span>SINANI</span></a>
+  <ul class="nav-links">
+    <li><a href="#rreth-nesh">Rreth Nesh</a></li>
+    <li><a href="#sherbimet">Çfarë Ofrojmë</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#kontakti">Kontakti</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h1>Restorant Sinani</h1>
+  <p>Eksperiencë Katering Profesionale për Eventet Tuaja më të Rëndësishme</p>
+  <a href="https://wa.me/355686215438" target="_blank" style="background:var(--gold); color:var(--dark); padding:15px 30px; text-decoration:none; font-weight:bold; text-transform:uppercase;">Na Kontakto në WhatsApp</a>
+</section>
+
+<section id="rreth-nesh">
+  <div class="section-title">
+    <h2>Rreth Nesh</h2>
+    <div class="line"></div>
+  </div>
+  <div class="about-content">
+    <p>Ne ofrojmë shërbime profesionale catering për çdo lloj eventi, duke sjellë kombinimin perfekt të ushqimit cilësor dhe shërbimit të përkushtuar. Me eksperiencë në organizimin e fejesave, netëve të dasmave dhe eventeve familjare, kujdesemi që çdo detaj të jetë i menduar me saktësi – nga përgatitja e ushqimit deri tek servirja dhe prezantimi.</p>
+  </div>
+</section>
+
+<section id="sherbimet" style="background: #fdfdfd;">
+  <div class="section-title">
+    <h2>Eksperienca Jonë</h2>
+    <div class="line"></div>
+  </div>
+  <div class="grid-3">
+    <div class="card">
+      <h3>Çfarë Ofrojmë</h3>
+      <ul>
+        <li>Menu të pasura me gatime tradicionale dhe moderne</li>
+        <li>Përbërës të freskët dhe cilësi e garantuar</li>
+        <li>Staf i trajnuar për shërbim korrekt dhe profesional</li>
+        <li>Organizim i plotë sipas kërkesave të klientit</li>
+        <li>Fleksibilitet për çdo numër të ftuarish</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Pse të na zgjidhni</h3>
+      <p>Sepse ne nuk ofrojmë vetëm ushqim — ne krijojmë një eksperiencë të plotë për ju dhe të ftuarit tuaj. Çdo event trajtohet me seriozitet maksimal, korrektësi dhe përkushtim.</p>
+    </div>
+    <div class="card">
+        <h3>Eventet Tona</h3>
+        <ul>
+            <li>Dasma & Fejesa</li>
+            <li>Evente Familjare</li>
+            <li>Ditëlindje & Festa</li>
+            <li>Kokteje & Evente Biznesi</li>
+        </ul>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="section-title">
+    <h2>Galeria Jonë</h2>
+    <div class="line"></div>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="IMG-20260424-WA0005.jpg"></div>
+    <div class="gallery-item"><img src="IMG-20260424-WA0006.jpg"></div>
+    <div class="gallery-item"><img src="IMG-20260424-WA0007.jpg"></div>
+    <div class="gallery-item"><img src="IMG-20260424-WA0008.jpg"></div>
+    <div class="gallery-item"><img src="IMG-20260424-WA0009.jpg"></div>
+    <div class="gallery-item"><img src="IMG-20260424-WA0010.jpg"></div>
+    <div class="gallery-item"><img src="IMG-20260424-WA0011.jpg"></div>
+    <div class="gallery-item"><img src="IMG-20260424-WA0012.jpg"></div>
+    <div class="gallery-item"><img src="IMG-20260424-WA0013.jpg"></div>
+  </div>
+</section>
+
+<section id="kontakti" style="padding:0;">
+  <div class="contact-box">
+    <div class="contact-info">
+      <h3>Na Kontaktoni</h3>
+      <p style="margin-bottom:20px;">Na kontaktoni për të diskutuar eventin tuaj dhe për të krijuar një ofertë të personalizuar sipas dëshirës tuaj.</p>
+      <p>Celulari:</p>
+      <a href="https://wa.me/355686215438" target="_blank" class="phone-link">+355 68 621 5438</a>
+      <p style="margin-top:20px;">📍 Tiranë, Shqipëri</p>
+    </div>
+    
+    <div style="background:rgba(255,255,255,0.05); padding:30px;">
+        <h4 style="color:var(--gold); margin-bottom:15px;">Dërgo Kërkesë në WhatsApp</h4>
+        <input type="text" id="emri" placeholder="Emri Juaj">
+        <select id="lloji">
+          <option value="">Zgjidh Eventin</option>
+          <option value="Dasmë">Dasmë</option>
+          <option value="Fejesë">Fejesë</option>
+          <option value="Ditëlindje">Ditëlindje</option>
+          <option value="Tjetër">Tjetër</option>
+        </select>
+        <textarea id="mesazhi" placeholder="Shkruani detajet e kërkesës tuaj..." style="height:100px;"></textarea>
+        <button class="btn-wa" onclick="dergoWhatsApp()">Dërgo Kërkesën</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Restorant Sinani – Katering & Evente. Të gjitha të drejtat të rezervuara.</p>
+</footer>
+
+<script>
+  function dergoWhatsApp() {
+    const emri = document.getElementById('emri').value;
+    const lloji = document.getElementById('lloji').value;
+    const mesazhi = document.getElementById('mesazhi').value;
+    const numri = "355686215438";
+
+    if(emri === "" || lloji === "") {
+        alert("Ju lutem plotësoni emrin dhe zgjidhni llojin e eventit.");
+        return;
+    }
+
+    const tekst = `Përshëndetje Restorant Sinani! %0A%0A` + 
+                  `*Kërkesë e re për Katering*%0A` + 
+                  `*Emri:* ${emri}%0A` + 
+                  `*Eventi:* ${lloji}%0A` + 
+                  `*Detajet:* ${mesazhi}`;
+
+    window.open(`https://wa.me/${numri}?text=${tekst}`, '_blank');
+  }
+</script>
+
+</body>
+</html>
